@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import logo from './logo.svg';
 import './App.css';
+import Album from './Album'
 
 function App() {
 
@@ -98,8 +99,9 @@ function myFunction() {
   
   return (
     <div className="App">
-      <h1 id="demo">This is a Heading</h1>
-      <button onClick={()=>myFunction()}>ADD ITEM</button>
+      {/*<h1 id="demo">This is a Heading</h1>*/}
+      {/*<button onClick={()=>myFunction()}>ADD ITEM</button>*/}
+      <Album/>
     </div>
   );
 }
