@@ -28,13 +28,12 @@ const Home = () => {
                             marginTop: 25,
                         }}
                     >
-                        👋 Welcome to Upsellio!
+                        👋 Welcome to Kale!
                     </Typography>
                     <Typography style={{ marginTop: 10 }}>
-                        Use the app to create different upsell offers. Nudge
-                        shoppers to
+                        Integate item, order to kale
                         <br />
-                        buy more and increase your sales.
+                        {''}
                     </Typography>
                     <Button
                         variant="contained"
@@ -71,14 +70,13 @@ const Home = () => {
                                             variant="body1"
                                             style={{ fontWeight: "bold" }}
                                         >
-                                            BOGO (Buy X Get Y)
+                                            Add item
                                         </Typography>
                                         <Typography
                                             variant="body2"
                                             style={{ marginTop: 8 }}
                                         >
-                                            Create BOGO offers this option. Buy
-                                            X Get Y for free type offers.
+                                            Add item on shopify
                                         </Typography>
                                         <Button
                                             variant="outlined"
@@ -89,7 +87,7 @@ const Home = () => {
                                                 textTransform: 'none'
                                             }}
                                         >
-                                            + Create
+                                            + Add
                                         </Button>
                                     </Box>
                                 </Box>
@@ -116,15 +114,13 @@ const Home = () => {
                                             variant="body1"
                                             style={{ fontWeight: "bold" }}
                                         >
-                                            Percentage Discounts
+                                            Create Order
                                         </Typography>
                                         <Typography
                                             variant="body2"
                                             style={{ marginTop: 8 }}
                                         >
-                                            Create Percentage based discounts.
-                                            Buy X and Get % off on Y type
-                                            discount offers.
+                                            Create order on shopify
                                         </Typography>
                                         <Button
                                             variant="outlined"
@@ -162,14 +158,13 @@ const Home = () => {
                                             variant="body1"
                                             style={{ fontWeight: "bold" }}
                                         >
-                                            Free Gifts
+                                            Cashback
                                         </Typography>
                                         <Typography
                                             variant="body2"
                                             style={{ marginTop: 8 }}
                                         >
-                                            You can easily offer FREE GIFTS from
-                                            this option to your customers.
+                                            Create cashback on shopify
                                         </Typography>
                                         <Button
                                             variant="outlined"
@@ -187,7 +182,7 @@ const Home = () => {
                             </CardContent>
                         </Card>
                     </Grid>
-                    <Grid item xs={12} sm={12} md={6} lg={4}>
+                    {/*<Grid item xs={12} sm={12} md={6} lg={4}>
                         <Card style={{ boxShadow: "0 0 1px black" }}>
                             <CardContent>
                                 <Box style={{ display: "flex" }}>
@@ -232,8 +227,8 @@ const Home = () => {
                                 </Box>
                             </CardContent>
                         </Card>
-                    </Grid>
-                    <Grid item xs={12} sm={12} md={6} lg={4}>
+                    </Grid>*/}
+                    {/*<Grid item xs={12} sm={12} md={6} lg={4}>
                         <Card style={{ boxShadow: "0 0 1px black" }}>
                             <CardContent>
                                 <Box style={{ display: "flex" }}>
@@ -278,7 +273,7 @@ const Home = () => {
                                 </Box>
                             </CardContent>
                         </Card>
-                    </Grid>
+                    </Grid>*/}
                 </Grid>
             </Container>
         </React.Fragment>
