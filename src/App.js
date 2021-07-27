@@ -6,7 +6,7 @@ function App() {
   const routing = useRoutes(routes());
   return (
     <React.Fragment>
-      <h1>HI!!</h1>
+      {routing}
     </React.Fragment>
   );
 }
