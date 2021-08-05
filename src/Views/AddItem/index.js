@@ -8,6 +8,7 @@ import DialogActions from "@material-ui/core/DialogActions/DialogActions";
 import Radio from '@material-ui/core/Radio';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
+import Card from '@material-ui/core/Card';
 import {dateFormat, isNumber, parseDoubleTwoDecimal} from "../../Utils/Validation";
 import {getCategoriesItems, getItemByNumber,getSubCategories} from "../../services/GetItemService";
 import {locationDetails, taxDetails} from "../../services/GetCommonService";
@@ -744,6 +745,7 @@ class AddItem  extends Component{
         const {classes} = this.props;
         return (
             <div>
+                <Card>
                 <main className={clsx(classes.content, {[classes.contentShift]: !this.state.toggleDrawer,})}>
                     <div className={this.state.toggleDrawer ? "container_main2" : "container_main"}>
                         <React.Fragment>
@@ -758,7 +760,7 @@ class AddItem  extends Component{
                             }
 
                         </React.Fragment>
-                        <p className='headingFontStyle2 heading_font'> Add Item </p>
+                        <p style={{color: '#106e4a', fontSize: 21}}> Add Item </p>
                         { this.prefSettings.subscription !== "KOP" ?
                             <Button variant="contained"
                                     style={{backgroundColor:"#E0E0E0", color:"black", float:"right", marginRight: 20, marginTop : -55}}
@@ -898,6 +900,7 @@ class AddItem  extends Component{
                                         onChange={this.handleChange('sellingPrice')}
                                         value={this.state.sellingPrice}
                                     />
+                                    <div style={{display: 'flex'}}>
                                     {this.prefSettings.wholesalePrice ?
                                     < TextField
                                         id="mui-theme-provider-outlined-input"
@@ -930,6 +933,7 @@ class AddItem  extends Component{
                                     } onChange={this.subCategoryChange}
                                                         ref={this.customAutoCompleteRef}
                                     />
+                                    
                                     {this.prefSettings.subscription !== "KOP" ?
                                         <TextField
                                             id="mui-theme-provider-outlined-input"
@@ -943,7 +947,7 @@ class AddItem  extends Component{
                                             value={this.state.purchasePrice}
                                         /> : null
                                     }
-
+                                    </div>
                                     {this.prefSettings.subscription !== "KOP" ?
                                         <TextField
                                             id="outlined-select-currency-native"
@@ -1246,6 +1250,7 @@ class AddItem  extends Component{
                         </Dialog>
                     </div>
                 </main>
+                </Card>
             </div>
         );
     }
