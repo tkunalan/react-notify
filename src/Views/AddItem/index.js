@@ -304,7 +304,7 @@ class AddItem  extends Component{
             "qoh":parseFloat((this.state.quantity).trim()) || 0.0,
             "qoh_count":parseFloat((this.state.quantity).trim()) || 0.0,
             "reorder_qty":parseFloat(this.state.reorderQuantity.trim()) || 0.0,
-            "location_id":this.state.location,
+            "location_id":"1",
             "bid_text":"n/l",
             "bid_rcd_qty":0.0,
             "supplier_id":"n/l",
@@ -313,11 +313,11 @@ class AddItem  extends Component{
 
         try {
             const response = await postItem(data);
-            try{
+            /*try{
             await postShopifyItem(response)
             }catch(e){
                 console.log(e)
-            }
+            }*/
             this.showAlertMessage("center","The item has been created successfully!","success");
             await this.fetchCategories();
             await this.clear_values();
@@ -1205,28 +1205,7 @@ class AddItem  extends Component{
                                                 </> }
                                         </TextField> : null
                                     }
-                                    <TextField
-                                        className={classes.margin_width_detail}
-                                        label="Item Detail"
-                                        variant="outlined"
-                                        autoComplete="off"
-                                        inputProps={{maxLength: 120}}
-                                        inputType="text"
-                                        onChange={this.handleChange('itemDetail')}
-                                        value={this.state.itemDetail}
-                                    />
-                                    {this.prefSettings.subscription !== "KOP" ?
-                                        <TextField
-                                            id="mui-theme-provider-outlined-input"
-                                            className={classes.margin_width}
-                                            label="Item code"
-                                            variant="outlined"
-                                            autoComplete="off"
-                                            type="text"
-                                            onChange={this.handleChange('itemCode')}
-                                            value={this.state.itemCode}
-                                        /> : null
-                                    }
+                                    
                                 </div>
                             </div>
                         </MuiThemeProvider>
