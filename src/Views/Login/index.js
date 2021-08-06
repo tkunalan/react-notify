@@ -1,4 +1,6 @@
 import React, {useEffect} from "react";
+import {Link as RouterLink, useNavigate} from 'react-router-dom'
+
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -34,6 +36,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function LogIn() {
     const classes = useStyles();
+    const navigate = useNavigate();
+
 
     useEffect(()=>{
         window.fbAsyncInit = function() {
@@ -62,7 +66,9 @@ export default function LogIn() {
             if (response.authResponse) {
                 console.log('Welcome!  Fetching your information.... ');
                 window.FB.api('/me', function(response) {
+
                     console.log('Good to see you, ' + response.name + '.');
+                    navigate('/additem', { replace: true });
                 });
             } else {
                 console.log('User cancelled login or did not fully authorize.');

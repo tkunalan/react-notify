@@ -39,7 +39,8 @@ const Home = () => {
               proxyUrl + "http://gsdev.kaleapps.com:3000"
             );
           } else {
-            let url = window.location.protocol + "//" + window.location.hostname;
+            let proxyUrl = "https://cors-anywhere.herokuapp.com/";
+            let url = proxyUrl + "http://csdev.kaleapps.com:3000"
             sessionStorage.setItem("base_url", url);
             sessionStorage.setItem("base_url_gql", url);
           }
