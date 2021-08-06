@@ -13,7 +13,6 @@ const routes  = () => [
       { path: '/', element: <Home/> },
       { path: '/additem', element: <AddItem/> },
       { path: '/login', element: <Login/> },
-      { path: '/test', element: <Test/> },
     ]
   }
 ];

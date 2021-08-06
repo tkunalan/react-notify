@@ -4,7 +4,7 @@ import PhoneInput from "react-phone-number-input";
 
 export default function Test() {
     const [value, setValue] = useState();
-
+    /*
     const configPhoneTextfield = {
         fullWidth: true,
         variant: "outlined",
@@ -17,7 +17,7 @@ export default function Test() {
         countryCallingCodeEditable: false,
         onChange: setValue,
         onBlur: onchange,
-    };
+    };*/
 
     console.log(window.geoplugin_countryCode(), "zzz");
     console.log(window.geoplugin_countryName(), "zzz");
@@ -26,7 +26,6 @@ export default function Test() {
 
     return (
         <div>
-            <PhoneInput {...configPhoneTextfield} style={{width: 400}} />
         </div>
     );
 }
