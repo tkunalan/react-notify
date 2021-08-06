@@ -19,10 +19,10 @@ export default function Test() {
         onBlur: onchange,
     };
 
-    console.log(window.geoplugin_countryCode(), "FFagdgdgdgdgdgdg");
-    console.log(window.geoplugin_countryName(), "FFagdgdgdgdgdgdg");
-    console.log(window.geoplugin_currencyCode(), "FFagdgdgdgdgdgdg");
-    console.log(window.geoplugin_currencySymbol_UTF8(), "FFagdgdgdgdgdgdg");
+    console.log(window.geoplugin_countryCode(), "zzz");
+    console.log(window.geoplugin_countryName(), "zzz");
+    console.log(window.geoplugin_currencyCode(), "zzz");
+    console.log(window.geoplugin_currencySymbol_UTF8(), "zzz");
 
     return (
         <div>
