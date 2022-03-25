@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react'
+import { Link, useNavigate } from "react-router-dom";
 import {
     Box,
     Button,
@@ -16,39 +17,13 @@ import Icon3 from "@material-ui/icons/Redeem";
 import Icon4 from "@material-ui/icons/Cancel";
 import Icon5 from "@material-ui/icons/MonetizationOn";
 
-const Home = () => {
-    useEffect(() => {
-        sessionStorage.setItem('user_id', 'M10@gmail.com');
-        sessionStorage.setItem('base_url_gql', 'http://ondev.kaleapps.com');
-        sessionStorage.setItem('prefSettings', JSON.stringify({"CurrencyType":"slr","industryType":"102","printerType":"80mm","itemDiscount":true,"wholesalePrice":true,"autoNumber":true,"chequesAlertPeriod":"0","expiryAlertPeriod":"0","selectedPrintStyle":"0","sendReceiptMethod":"1","selectedLanguage":"001","selectedTaxType":"0","receiptImage":false,"printerAutocut":false,"itemPicture":false,"editSellingPrice":true,"shortKeyStyle":"0","itemAutoEntry":true,"allowOrderConfirm":false,"orderConfPopup":true,"allowDualLanguagePrint":true,"allowMultiPrinters":false,"salesNoInventory":true,"holdOrderDelete":false,"splitPayment":true,"orderDiscount":true,"serviceCharge":true,"serviceChargePct":10,"batchIdPopup":true,"allowIMEI":false,"allowTax":false,"allowLoyalty":false,"allowProduction":true,"allowItemCombo":false,"allowCostingMethod":"LIFO","allowTog":true,"subscription":"KOPP","lotto":0,"lotto_winning":0,"lottery":0,"lottery_winning":0}));
-        sessionStorage.setItem("companyInfo", JSON.stringify([{"company_description":"n/l","store_address":"n/l","industry":"shop","company_message":" ------------------IMPORTANT NOTICE-----------------           \nIN CASE OF A PRICE DISCREPANCY, RETURN THE ITEM & BILL WITHIN 4 DAYS TO REFUND THE DIFFERENCE. *************************************************** PLEASE CALL OUR HOTLINE FOR YOUR VALUED SUGGESTIONS AND COMMENTS *************************************************** THANK YOU! COME AGAIN!","last_updated":"2021-08-01T06:12:57Z","created":"2021-03-12T03:32:52Z","company_name":"Sharan Multi","company_address":"Nelliady","company_id":"bYfo2AU2BENhRhRnfLim","contact_name":"n/l","client_id":"eVG5vocCbjSehQuYYePO1ZdMkosoZtyFynmxo7nY","company_no":"0777123456"}]))
-        sessionStorage.setItem("authorization", "GZyqJDD36t4y336Pti3Bm4QQUxDygYWI9Yybvmdut4Bhv6NrkpM7Gje8WpQhy01XGYkYe3FKfbs")
-        sessionStorage.setItem("company_id", "bYfo2AU2BENhRhRnfLim")
-        sessionStorage.setItem("user_designation", "ADMIN")
-        sessionStorage.setItem("base_url", "http://ondev.kaleapps.com")
-        sessionStorage.setItem("client_id", "eVG5vocCbjSehQuYYePO1ZdMkosoZtyFynmxo7nY")
 
-        if (window.location.hostname === "localhost") {
-            let proxyUrl = "https://cors-anywhere.herokuapp.com/";
-            sessionStorage.setItem(
-              "base_url",
-              proxyUrl + "http://csdev.kaleapps.com:3000"
-            );
-            sessionStorage.setItem(
-              "base_url_gql",
-              proxyUrl + "http://gsdev.kaleapps.com:3000"
-            );
-          } else {
-            let proxyUrl = "https://cors-anywhere.herokuapp.com/";
-            let url = proxyUrl + "http://csdev.kaleapps.com:3000"
-            sessionStorage.setItem("base_url", url);
-            sessionStorage.setItem("base_url_gql", url);
-          }
-    })
+function Home() {
+const navigate = useNavigate();
 
-    return (
-        <React.Fragment>
-            <Container>
+  return (
+    <div>
+        <Container>
                 <Box textAlign="center">
                     <Typography
                         variant="h6"
@@ -115,6 +90,7 @@ const Home = () => {
                                                 marginTop: 10,
                                                 textTransform: 'none'
                                             }}
+                                            onClick={()=> navigate("/additem")}
                                         >
                                             + Add
                                         </Button>
@@ -305,8 +281,8 @@ const Home = () => {
                     </Grid>*/}
                 </Grid>
             </Container>
-        </React.Fragment>
-    );
-};
+    </div>
+  )
+}
 
-export default Home;
+export default Home
