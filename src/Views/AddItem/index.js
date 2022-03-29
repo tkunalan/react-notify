@@ -208,7 +208,7 @@ class AddItem  extends Component{
             openSnackBar : false,
             welcomeDialog : false,
             educationDialog : false,
-            toggleDrawer : true,
+            toggleDrawer : false,
             openExcel: false,
             confirmDialog: {},
             // selectedFile: null
